@@ -1,0 +1,490 @@
+{
+	"info": {
+		"_postman_id": "2c7edc2c-5f98-4b93-b647-4cb01a495314",
+		"name": "Accounts-Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "16913431-2c7edc2c-5f98-4b93-b647-4cb01a495314"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "{account Number}",
+					"item": [
+						{
+							"name": "statement",
+							"item": [
+								{
+									"name": "Date",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "54a8ddbc-ae4d-45b5-b55f-f4758abdc7ee",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "7cef2f0c-7a89-4f73-8a0c-4802066b56d5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/form-urlencoded"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"from\": \"Thu Apr 27 2023 16:19:39 GMT-0500 (Central Daylight Time)\",\n  \"to\": \"Tue Jun 13 2023 15:21:07 GMT-0500 (Central Daylight Time)\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"accounts",
+												":accountNumber",
+												"statement",
+												"date"
+											],
+											"variable": [
+												{
+													"id": "97c1a07f-675f-4bd1-870f-1102e419ba5f",
+													"key": "accountNumber",
+													"value": "anim cupidatat esse adipisicing",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Date"
+									},
+									"response": [
+										{
+											"id": "e7ac56ed-f6ea-4a0b-bff7-1d4bf1879c0a",
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"from\": \"Thu Apr 27 2023 16:19:39 GMT-0500 (Central Daylight Time)\",\n  \"to\": \"Tue Jun 13 2023 15:21:07 GMT-0500 (Central Daylight Time)\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"accounts",
+														":accountNumber",
+														"statement",
+														"date"
+													],
+													"variable": [
+														{
+															"id": "97c1a07f-675f-4bd1-870f-1102e419ba5f",
+															"key": "accountNumber",
+															"value": "anim cupidatat esse adipisicing",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Date"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"disabled": false,
+													"key": "Access-Control-Allow-Origin",
+													"value": "*",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Connection",
+													"value": "close",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Content-Encoding",
+													"value": "gzip",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Date",
+													"value": "Mon, 14 Jun 2021 14:30:25 GMT",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "ETag",
+													"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\"",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Server",
+													"value": "nginx",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Transfer-Encoding",
+													"value": "chunked",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Vary",
+													"value": "Accept-Encoding",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "X-RateLimit-Limit",
+													"value": "120",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "X-RateLimit-Remaining",
+													"value": "119",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "X-RateLimit-Reset",
+													"value": "1623681083",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "x-srv-span",
+													"value": "v=1;s=210e5b055e5bd71e",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "x-srv-trace",
+													"value": "v=1;t=d33d68b932344fce",
+													"description": ""
+												},
+												{
+													"key": "Content-Type",
+													"name": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"period\": {\n        \"from\": \"Wed Mar 22 2023 09:43:58 GMT-0500 (Central Daylight Time)\",\n        \"to\": \"Tue Jun 13 2023 16:52:59 GMT-0500 (Central Daylight Time)\"\n    },\n    \"balance\": {\n        \"opening\": 488.24,\n        \"closing\": 913.30\n    },\n    \"money\": {\n        \"in\": 683.43,\n        \"out\": 399.31\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Wed Jun 14 2023 06:02:33 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Larkin - Gleason\",\n            \"type\": \"withdrawal\",\n            \"amount\": 336.29,\n            \"balance\": 711.35\n        },\n        {\n            \"date\": \"Wed Jun 14 2023 07:59:43 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Hodkiewicz - Oberbrunner\",\n            \"type\": \"withdrawal\",\n            \"amount\": 850.12,\n            \"balance\": 580.35\n        },\n        {\n            \"date\": \"Wed Jun 14 2023 04:47:57 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Monahan, Quitzon and Ryan\",\n            \"type\": \"payment\",\n            \"amount\": 287.95,\n            \"balance\": 676.27\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 14:06:20 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Keebler LLC\",\n            \"type\": \"deposit\",\n            \"amount\": 937.85,\n            \"balance\": 142.56\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 18:47:14 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"O'Connell Inc\",\n            \"type\": \"payment\",\n            \"amount\": 113.11,\n            \"balance\": 968.04\n        },\n        {\n            \"date\": \"Wed Jun 14 2023 02:06:47 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Romaguera, Cormier and Toy\",\n            \"type\": \"payment\",\n            \"amount\": 717.67,\n            \"balance\": 151.95\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 08:55:29 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Barrows, Friesen and Okuneva\",\n            \"type\": \"withdrawal\",\n            \"amount\": 265.70,\n            \"balance\": 998.80\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 11:43:42 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Schoen LLC\",\n            \"type\": \"payment\",\n            \"amount\": 87.84,\n            \"balance\": 527.02\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 13:06:34 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Casper - Bruen\",\n            \"type\": \"deposit\",\n            \"amount\": 924.51,\n            \"balance\": 581.44\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 22:13:56 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Schinner - Gislason\",\n            \"type\": \"payment\",\n            \"amount\": 741.87,\n            \"balance\": 7.93\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Latest",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8e73cddc-f9cc-4c86-ba3e-426298337d38",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"pm.test(\"Response time is less than 5000ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "a180747f-206f-4b6d-8772-93369ff1de7a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/accounts/:accountNumber/statement/latest",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"accounts",
+												":accountNumber",
+												"statement",
+												"latest"
+											],
+											"variable": [
+												{
+													"id": "05efd6b6-6dd5-4c4b-a096-c1eaae29b430",
+													"key": "accountNumber",
+													"value": "anim cupidatat esse adipisicing",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Latest"
+									},
+									"response": [
+										{
+											"id": "b46083b5-0860-43e1-a91c-ff89d4117ea7",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/accounts/:accountNumber/statement/latest",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"accounts",
+														":accountNumber",
+														"statement",
+														"latest"
+													],
+													"variable": [
+														{
+															"id": "05efd6b6-6dd5-4c4b-a096-c1eaae29b430",
+															"key": "accountNumber",
+															"value": "anim cupidatat esse adipisicing",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Latest"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"id": "e0de1654-ae71-4b09-81fa-18ae6db0edae"
+						},
+						{
+							"name": "Overview",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "da54f262-884a-420b-8c17-b44a326ab80a",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "3c00fe86-541a-4f9d-876f-0b9e89a7cc7f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/accounts/:accountNumber/overview",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts",
+										":accountNumber",
+										"overview"
+									],
+									"variable": [
+										{
+											"id": "ab01ff3e-2134-4ae0-b5cb-864d7bc5d633",
+											"key": "accountNumber",
+											"value": "anim cupidatat esse adipisicing",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Overview"
+							},
+							"response": [
+								{
+									"id": "b006ce39-f335-461c-80ca-a01be6bea3f4",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/accounts/:accountNumber/overview",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"accounts",
+												":accountNumber",
+												"overview"
+											],
+											"variable": [
+												{
+													"id": "ab01ff3e-2134-4ae0-b5cb-864d7bc5d633",
+													"key": "accountNumber",
+													"value": "anim cupidatat esse adipisicing",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Overview"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "d2348fb0-da75-4fa0-a2fa-babc962988ce"
+				},
+				{
+					"name": "Create",
+					"id": "b6e4d64c-dbd6-4dde-825c-5c5e5795a3bb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"holder\": \"{{customerId}}\",\n  \"type\": \"Money Market Account\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/accounts/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts",
+								"create"
+							]
+						},
+						"description": "Create"
+					},
+					"response": [
+						{
+							"id": "9b0d09de-920f-4c75-bfe7-a5d50eeecb06",
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"holder\": \"{{customerId}}\",\n  \"type\": \"Money Market Account\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/accounts/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts",
+										"create"
+									]
+								},
+								"description": "Create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "94fa5a12-5786-4bcb-9aeb-717a390d9a80"
+		}
+	],
+	"variable": [
+		{
+			"id": "8c1fab32-3243-4779-a678-d3352ae0369b",
+			"key": "baseUrl",
+			"value": "{{url}}"
+		}
+	]
+}

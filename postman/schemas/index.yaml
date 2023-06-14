@@ -1,0 +1,167 @@
+---
+openapi: 3.0.3
+security:
+    - testAuth: []
+info:
+  title: Accounts 
+  version: 1.0.0
+  contact:
+    url: https://example.com/support,
+    email: johnsmith@postmanova.com
+servers:
+  - url: "{{url}}"
+    description: "primary server"
+paths:
+  /accounts/create:
+    post:
+      summary: Create an Account
+      description: Create
+      operationId: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                holder:
+                  type: string
+                  example: "{{customerId}}"
+                type:
+                  type: string
+                  example: "Credit Card Account"
+            example:
+              holder: "{{customerId}}"
+              type: "Home Loan Account"
+      responses:
+        "200":
+          description: ""
+  "/accounts/{accountNumber}/overview":
+    get:
+      summary: Overview
+      description: Overview
+      operationId: overview
+      responses:
+        "200":
+          description: ""
+    parameters:
+      - name: accountNumber
+        in: path
+        required: true
+        schema:
+          type: string
+  "/accounts/{accountNumber}/statement/date":
+    get:
+      tags:
+        - Statement
+      summary: Date
+      description: Date
+      operationId: date
+      requestBody:
+        content:
+          application/form-urlencoded:
+            schema:
+              type: object
+              properties:
+                from:
+                  type: string
+                  example: "Sun Jun 26 2022 19:39:03 GMT-0500 (Central Daylight Time)"
+                to:
+                  type: string
+                  example: "Wed Jun 14 2023 03:06:48 GMT-0500 (Central Daylight Time)"
+            example:
+              from: "Tue Feb 14 2023 19:07:08 GMT-0600 (Central Standard Time)"
+              to: "Tue Jun 13 2023 14:40:53 GMT-0500 (Central Daylight Time)"
+      responses:
+        "200":
+          description: 200 OK
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: "*"
+            Connection:
+              schema:
+                type: string
+                example: close
+            Content-Encoding:
+              schema:
+                type: string
+                example: gzip
+            Date:
+              schema:
+                type: string
+                example: "Mon, 14 Jun 2021 14:30:25 GMT"
+            ETag:
+              schema:
+                type: string
+                example: "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+            Server:
+              schema:
+                type: string
+                example: nginx
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            X-RateLimit-Limit:
+              schema:
+                type: string
+                example: "120"
+            X-RateLimit-Remaining:
+              schema:
+                type: string
+                example: "119"
+            X-RateLimit-Reset:
+              schema:
+                type: string
+                example: "1623681083"
+            x-srv-span:
+              schema:
+                type: string
+                example: v=1;s=210e5b055e5bd71e
+            x-srv-trace:
+              schema:
+                type: string
+                example: v=1;t=d33d68b932344fce
+          content:
+            text/plain:
+              examples:
+                200 OK:
+                  value: "{\n    \"period\": {\n        \"from\": \"Tue Mar 21 2023 10:26:08 GMT-0500 (Central Daylight Time)\",\n        \"to\": \"Tue Jun 13 2023 14:49:00 GMT-0500 (Central Daylight Time)\"\n    },\n    \"balance\": {\n        \"opening\": 168.78,\n        \"closing\": 498.12\n    },\n    \"money\": {\n        \"in\": 447.36,\n        \"out\": 195.38\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Wed Jun 14 2023 08:18:47 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Wuckert - Parker\",\n            \"type\": \"withdrawal\",\n            \"amount\": 303.53,\n            \"balance\": 21.49\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 11:52:06 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Roob LLC\",\n            \"type\": \"withdrawal\",\n            \"amount\": 264.49,\n            \"balance\": 974.07\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 10:19:31 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Rau - Blanda\",\n            \"type\": \"invoice\",\n            \"amount\": 703.11,\n            \"balance\": 990.53\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 15:50:45 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Boyer - Roberts\",\n            \"type\": \"withdrawal\",\n            \"amount\": 407.79,\n            \"balance\": 124.08\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 10:06:02 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Schultz - Hilll\",\n            \"type\": \"withdrawal\",\n            \"amount\": 636.35,\n            \"balance\": 172.70\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 18:52:26 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Spencer - Rempel\",\n            \"type\": \"payment\",\n            \"amount\": 517.94,\n            \"balance\": 908.90\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 12:27:46 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Bogan LLC\",\n            \"type\": \"payment\",\n            \"amount\": 298.28,\n            \"balance\": 869.77\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 10:51:36 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Heidenreich LLC\",\n            \"type\": \"invoice\",\n            \"amount\": 431.48,\n            \"balance\": 37.82\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 09:36:39 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Schumm - Howe\",\n            \"type\": \"payment\",\n            \"amount\": 995.33,\n            \"balance\": 19.33\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 23:40:01 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Mayert LLC\",\n            \"type\": \"payment\",\n            \"amount\": 436.51,\n            \"balance\": 176.43\n        }\n    ]\n}"
+    parameters:
+      - name: accountNumber
+        in: path
+        required: true
+        schema:
+          type: string
+  "/accounts/{accountNumber}/statement/latest":
+    get:
+      tags:
+        - Statement
+      summary: Latest
+      description: Latest
+      operationId: latest
+      responses:
+        "200":
+          description: ""
+    parameters:
+      - name: accountNumber
+        in: path
+        required: true
+        schema:
+          type: string
+tags:
+  - name: Statement
+components:
+    securitySchemes:
+        api_key:
+            type: apiKey
+            name: x-api-key
+            in: header
+        BasicAuth:
+            type: http
+            scheme: basic

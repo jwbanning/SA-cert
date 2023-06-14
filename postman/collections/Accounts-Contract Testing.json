@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "ce448af6-e78a-4038-a8b0-5983f0ec7bc6",
+		"name": "Accounts-Contract Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "16913431-ce448af6-e78a-4038-a8b0-5983f0ec7bc6"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "{account Number}",
+					"item": [
+						{
+							"name": "statement",
+							"item": [
+								{
+									"name": "Date",
+									"id": "4678a38d-f315-40df-b7cd-01501e6acdf7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/form-urlencoded"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"from\": \"Wed May 24 2023 01:45:22 GMT-0500 (Central Daylight Time)\",\n  \"to\": \"Tue Jun 13 2023 22:28:29 GMT-0500 (Central Daylight Time)\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"accounts",
+												":accountNumber",
+												"statement",
+												"date"
+											],
+											"variable": [
+												{
+													"id": "7901a804-53a9-4089-b7fd-693bbe00f9f1",
+													"key": "accountNumber",
+													"value": "velit consectetur in",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Date"
+									},
+									"response": [
+										{
+											"id": "113dff72-6b76-49bb-8d34-2df326c7f452",
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"from\": \"Wed May 24 2023 01:45:22 GMT-0500 (Central Daylight Time)\",\n  \"to\": \"Tue Jun 13 2023 22:28:29 GMT-0500 (Central Daylight Time)\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"accounts",
+														":accountNumber",
+														"statement",
+														"date"
+													],
+													"variable": [
+														{
+															"id": "7901a804-53a9-4089-b7fd-693bbe00f9f1",
+															"key": "accountNumber",
+															"value": "velit consectetur in",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Date"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"disabled": false,
+													"key": "Access-Control-Allow-Origin",
+													"value": "*",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Connection",
+													"value": "close",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Content-Encoding",
+													"value": "gzip",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Date",
+													"value": "Mon, 14 Jun 2021 14:30:25 GMT",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "ETag",
+													"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\"",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Server",
+													"value": "nginx",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Transfer-Encoding",
+													"value": "chunked",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "Vary",
+													"value": "Accept-Encoding",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "X-RateLimit-Limit",
+													"value": "120",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "X-RateLimit-Remaining",
+													"value": "119",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "X-RateLimit-Reset",
+													"value": "1623681083",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "x-srv-span",
+													"value": "v=1;s=210e5b055e5bd71e",
+													"description": ""
+												},
+												{
+													"disabled": false,
+													"key": "x-srv-trace",
+													"value": "v=1;t=d33d68b932344fce",
+													"description": ""
+												},
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"period\": {\n        \"from\": \"Thu Feb 16 2023 18:39:08 GMT-0600 (Central Standard Time)\",\n        \"to\": \"Tue Jun 13 2023 10:39:38 GMT-0500 (Central Daylight Time)\"\n    },\n    \"balance\": {\n        \"opening\": 251.15,\n        \"closing\": 135.54\n    },\n    \"money\": {\n        \"in\": 526.90,\n        \"out\": 476.15\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Wed Jun 14 2023 02:00:24 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Rosenbaum, Gerlach and Schimmel\",\n            \"type\": \"deposit\",\n            \"amount\": 331.36,\n            \"balance\": 491.94\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 16:15:35 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Yundt, Armstrong and Rice\",\n            \"type\": \"withdrawal\",\n            \"amount\": 168.60,\n            \"balance\": 735.63\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 19:12:03 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Sipes Group\",\n            \"type\": \"invoice\",\n            \"amount\": 357.70,\n            \"balance\": 432.32\n        },\n        {\n            \"date\": \"Wed Jun 14 2023 04:22:14 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Anderson, Corkery and Cole\",\n            \"type\": \"deposit\",\n            \"amount\": 351.23,\n            \"balance\": 317.46\n        },\n        {\n            \"date\": \"Wed Jun 14 2023 00:33:28 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Zboncak, Stiedemann and Paucek\",\n            \"type\": \"invoice\",\n            \"amount\": 863.69,\n            \"balance\": 675.29\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 12:43:54 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Adams - Mann\",\n            \"type\": \"payment\",\n            \"amount\": 458.98,\n            \"balance\": 787.21\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 08:50:44 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Lockman LLC\",\n            \"type\": \"withdrawal\",\n            \"amount\": 321.85,\n            \"balance\": 984.63\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 17:45:13 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Schinner, Ullrich and Nikolaus\",\n            \"type\": \"deposit\",\n            \"amount\": 483.11,\n            \"balance\": 995.07\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 20:09:12 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Jacobi, Cummerata and Adams\",\n            \"type\": \"invoice\",\n            \"amount\": 760.49,\n            \"balance\": 959.58\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 13:52:17 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Spinka Group\",\n            \"type\": \"withdrawal\",\n            \"amount\": 377.01,\n            \"balance\": 457.83\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Latest",
+									"id": "36b2a5bf-4e28-4f08-a43a-155742d7be55",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/accounts/:accountNumber/statement/latest",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"accounts",
+												":accountNumber",
+												"statement",
+												"latest"
+											],
+											"variable": [
+												{
+													"id": "e1cfd3fb-5ab9-40db-bfb1-6fae9bcd1ad7",
+													"key": "accountNumber",
+													"value": "velit consectetur in",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Latest"
+									},
+									"response": [
+										{
+											"id": "902ea74d-ceaa-4b56-800d-6f80fc803503",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/accounts/:accountNumber/statement/latest",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"accounts",
+														":accountNumber",
+														"statement",
+														"latest"
+													],
+													"variable": [
+														{
+															"id": "e1cfd3fb-5ab9-40db-bfb1-6fae9bcd1ad7",
+															"key": "accountNumber",
+															"value": "velit consectetur in",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Latest"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"id": "1095377c-4b45-4e3c-a7a9-6980481ffdb7"
+						},
+						{
+							"name": "Overview",
+							"id": "02804b05-492c-4583-a961-33dc6b4c689a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/accounts/:accountNumber/overview",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts",
+										":accountNumber",
+										"overview"
+									],
+									"variable": [
+										{
+											"id": "3289c9ba-0be3-4f5d-9d58-1acab6c0e023",
+											"key": "accountNumber",
+											"value": "velit consectetur in",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Overview"
+							},
+							"response": [
+								{
+									"id": "8e0c5408-88a6-48cc-9d69-20c94a8bd0be",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/accounts/:accountNumber/overview",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"accounts",
+												":accountNumber",
+												"overview"
+											],
+											"variable": [
+												{
+													"id": "3289c9ba-0be3-4f5d-9d58-1acab6c0e023",
+													"key": "accountNumber",
+													"value": "velit consectetur in",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Overview"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "9dfe269a-6834-4832-ad16-e0a70c3de41c"
+				},
+				{
+					"name": "Create",
+					"id": "1760694b-88ff-4de5-99dd-0cbc347891a7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"holder\": \"{{customerId}}\",\n  \"type\": \"Checking Account\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/accounts/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts",
+								"create"
+							]
+						},
+						"description": "Create"
+					},
+					"response": [
+						{
+							"id": "7ab9b6df-a3b3-402d-bcba-4e73f47767f1",
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"holder\": \"{{customerId}}\",\n  \"type\": \"Checking Account\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/accounts/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts",
+										"create"
+									]
+								},
+								"description": "Create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "c2f024f8-f706-46d6-a9cd-d8a0958c59f1"
+		}
+	],
+	"variable": [
+		{
+			"id": "bf0edd13-ae75-4bbd-83b7-e4e3028c3190",
+			"key": "baseUrl",
+			"value": "{{url}}"
+		}
+	]
+}

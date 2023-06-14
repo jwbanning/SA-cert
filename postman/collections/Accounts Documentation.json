@@ -1,0 +1,486 @@
+{
+	"info": {
+		"_postman_id": "76149e9d-38db-424a-889a-1e5ac9637013",
+		"name": "Accounts Documentation",
+		"description": "Contact Support:\n Email: johnsmith@postmanova.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "16913431-76149e9d-38db-424a-889a-1e5ac9637013"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "{accountNumber}",
+					"item": [
+						{
+							"name": "statement",
+							"item": [
+								{
+									"name": "latest",
+									"item": [
+										{
+											"name": "/accounts/:accountNumber/statement/latest",
+											"id": "c72cc30f-08c4-4c39-af4c-361496a2151b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/accounts/:accountNumber/statement/latest",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"accounts",
+														":accountNumber",
+														"statement",
+														"latest"
+													],
+													"variable": [
+														{
+															"id": "40bf4d1c-ff60-43fa-886c-abe239927ff8",
+															"key": "accountNumber",
+															"value": "reprehenderit"
+														}
+													]
+												},
+												"description": "Latest"
+											},
+											"response": [
+												{
+													"id": "b2f0f266-7653-483f-b797-5e2a90f8d3c6",
+													"name": "Untitled Example",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/accounts/:accountNumber/statement/latest",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"accounts",
+																":accountNumber",
+																"statement",
+																"latest"
+															],
+															"variable": [
+																{
+																	"id": "40bf4d1c-ff60-43fa-886c-abe239927ff8",
+																	"key": "accountNumber",
+																	"value": "reprehenderit"
+																}
+															]
+														},
+														"description": "Latest"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": null
+												}
+											]
+										}
+									],
+									"id": "e99ddffb-297e-49f7-97a4-cde14271dc93"
+								},
+								{
+									"name": "date",
+									"item": [
+										{
+											"name": "/accounts/:accountNumber/statement/date",
+											"id": "8bdb1daf-97eb-4406-83f2-84e595320de6",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"from\": \"Tue Feb 14 2023 19:07:08 GMT-0600 (Central Standard Time)\",\n  \"to\": \"Tue Jun 13 2023 14:40:53 GMT-0500 (Central Daylight Time)\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"accounts",
+														":accountNumber",
+														"statement",
+														"date"
+													],
+													"variable": [
+														{
+															"id": "3b68e689-2dda-456a-9e9d-33320e16c878",
+															"key": "accountNumber",
+															"value": "reprehenderit"
+														}
+													]
+												},
+												"description": "Date"
+											},
+											"response": [
+												{
+													"id": "902413f0-0b79-4bf2-996f-fb7aabf69c04",
+													"name": "200 OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/form-urlencoded"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"from\": \"Tue Feb 14 2023 19:07:08 GMT-0600 (Central Standard Time)\",\n  \"to\": \"Tue Jun 13 2023 14:40:53 GMT-0500 (Central Daylight Time)\"\n}"
+														},
+														"url": {
+															"raw": "{{baseUrl}}/accounts/:accountNumber/statement/date",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"accounts",
+																":accountNumber",
+																"statement",
+																"date"
+															],
+															"variable": [
+																{
+																	"id": "3b68e689-2dda-456a-9e9d-33320e16c878",
+																	"key": "accountNumber",
+																	"value": "reprehenderit"
+																}
+															]
+														},
+														"description": "Date"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "Connection",
+															"value": "close"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "Content-Encoding",
+															"value": "gzip"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "Date",
+															"value": "Mon, 14 Jun 2021 14:30:25 GMT"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "ETag",
+															"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "Server",
+															"value": "nginx"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "Vary",
+															"value": "Accept-Encoding"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "X-RateLimit-Limit",
+															"value": "120"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "X-RateLimit-Remaining",
+															"value": "119"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "X-RateLimit-Reset",
+															"value": "1623681083"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "x-srv-span",
+															"value": "v=1;s=210e5b055e5bd71e"
+														},
+														{
+															"disabled": false,
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															},
+															"key": "x-srv-trace",
+															"value": "v=1;t=d33d68b932344fce"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"period\": {\n        \"from\": \"Tue Mar 21 2023 10:26:08 GMT-0500 (Central Daylight Time)\",\n        \"to\": \"Tue Jun 13 2023 14:49:00 GMT-0500 (Central Daylight Time)\"\n    },\n    \"balance\": {\n        \"opening\": 168.78,\n        \"closing\": 498.12\n    },\n    \"money\": {\n        \"in\": 447.36,\n        \"out\": 195.38\n    },\n    \"transactions\": [\n        {\n            \"date\": \"Wed Jun 14 2023 08:18:47 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Wuckert - Parker\",\n            \"type\": \"withdrawal\",\n            \"amount\": 303.53,\n            \"balance\": 21.49\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 11:52:06 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Roob LLC\",\n            \"type\": \"withdrawal\",\n            \"amount\": 264.49,\n            \"balance\": 974.07\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 10:19:31 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Rau - Blanda\",\n            \"type\": \"invoice\",\n            \"amount\": 703.11,\n            \"balance\": 990.53\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 15:50:45 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Boyer - Roberts\",\n            \"type\": \"withdrawal\",\n            \"amount\": 407.79,\n            \"balance\": 124.08\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 10:06:02 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Schultz - Hilll\",\n            \"type\": \"withdrawal\",\n            \"amount\": 636.35,\n            \"balance\": 172.70\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 18:52:26 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Spencer - Rempel\",\n            \"type\": \"payment\",\n            \"amount\": 517.94,\n            \"balance\": 908.90\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 12:27:46 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Bogan LLC\",\n            \"type\": \"payment\",\n            \"amount\": 298.28,\n            \"balance\": 869.77\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 10:51:36 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Heidenreich LLC\",\n            \"type\": \"invoice\",\n            \"amount\": 431.48,\n            \"balance\": 37.82\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 09:36:39 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Schumm - Howe\",\n            \"type\": \"payment\",\n            \"amount\": 995.33,\n            \"balance\": 19.33\n        },\n        {\n            \"date\": \"Tue Jun 13 2023 23:40:01 GMT-0500 (Central Daylight Time)\",\n            \"description\": \"Mayert LLC\",\n            \"type\": \"payment\",\n            \"amount\": 436.51,\n            \"balance\": 176.43\n        }\n    ]\n}"
+												}
+											]
+										}
+									],
+									"id": "f30b0e3d-15cc-475c-81e5-764a18a5c263"
+								}
+							],
+							"id": "34ed5270-9ba7-4ba4-ae96-74cfa9b1cf58"
+						},
+						{
+							"name": "overview",
+							"item": [
+								{
+									"name": "/accounts/:accountNumber/overview",
+									"id": "aca1fb1c-63cd-4c7d-a28f-5576e516e731",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/accounts/:accountNumber/overview",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"accounts",
+												":accountNumber",
+												"overview"
+											],
+											"variable": [
+												{
+													"id": "cbee6089-8a93-4a5f-940f-e00ca58c3e48",
+													"key": "accountNumber",
+													"value": "reprehenderit"
+												}
+											]
+										},
+										"description": "Overview"
+									},
+									"response": [
+										{
+											"id": "f5c9701c-ab7b-4918-8dd6-9b7556b369f0",
+											"name": "Untitled Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/accounts/:accountNumber/overview",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"accounts",
+														":accountNumber",
+														"overview"
+													],
+													"variable": [
+														{
+															"id": "cbee6089-8a93-4a5f-940f-e00ca58c3e48",
+															"key": "accountNumber",
+															"value": "reprehenderit"
+														}
+													]
+												},
+												"description": "Overview"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "8f510f69-4d53-4e19-877f-b9866aaa6bd7"
+						}
+					],
+					"id": "509ed1e3-6e46-4ef6-80e3-00e6f5919e3f"
+				},
+				{
+					"name": "create",
+					"item": [
+						{
+							"name": "/accounts/create",
+							"id": "d8b5870a-07f6-4d1e-bfc2-7f7218de5299",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"holder\": \"{{customerId}}\",\n  \"type\": \"Home Loan Account\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/accounts/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts",
+										"create"
+									]
+								},
+								"description": "Create"
+							},
+							"response": [
+								{
+									"id": "3256b5f2-3927-41b9-a243-80f75dc796fd",
+									"name": "Untitled Example",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"holder\": \"{{customerId}}\",\n  \"type\": \"Home Loan Account\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/accounts/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"accounts",
+												"create"
+											]
+										},
+										"description": "Create"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "1f6935ed-93e7-4d31-b7ba-128430445acb"
+				}
+			],
+			"id": "3c6cfb27-7ac1-4f82-a58f-d4c95b5bd74b"
+		}
+	],
+	"variable": [
+		{
+			"id": "ea881110-1321-4b8b-8996-ba7beab38cc8",
+			"key": "baseUrl",
+			"value": "{{url}}"
+		}
+	]
+}
