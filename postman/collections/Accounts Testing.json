@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "a0ddde63-a1ae-403b-90de-bdd42c95e2df",
+		"name": "Accounts Testing",
+		"description": "API for managing accounts\n\nContact Support:\n Email: admin@admin.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "16913431-a0ddde63-a1ae-403b-90de-bdd42c95e2df"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "Get accounts",
+					"id": "3007e4af-cfc8-4300-9746-abef17520321",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						},
+						"description": "Get all from the API at the / endpoint"
+					},
+					"response": [
+						{
+							"id": "9a21b4a9-ab1f-4c09-afb1-c90721b2aeb3",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/accounts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts"
+									]
+								},
+								"description": "Get all from the API at the / endpoint"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"You made a GET request!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Replace an account entry",
+					"id": "0f60496b-4515-4c9e-b162-aea6e683b890",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Duis ex pariatur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/accounts?id=ut",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "ut"
+								}
+							]
+						},
+						"description": "Put data at the / endpoint by passing a query parameter representing the id and body json with the data to update with"
+					},
+					"response": [
+						{
+							"id": "1b4bfc47-eed3-49cd-88ce-4b2eded99e2c",
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Duis ex pariatur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/accounts?id=ut",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "ut"
+										}
+									]
+								},
+								"description": "Put data at the / endpoint by passing a query parameter representing the id and body json with the data to update with"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"name\": \"sue\"\n  },\n  \"message\": \"You made a PUT request to update id=1 with the following data!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add new account",
+					"id": "2b66f67d-cb77-4b55-8940-e4fb7f493ed9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"location\": \"sunt anim irure occaecat\",\n  \"name\": \"veniam laboris sit quis\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						},
+						"description": "Post data to the API at the / endpoint, passing the json to add as body data"
+					},
+					"response": [
+						{
+							"id": "65a045b6-291e-4d9a-b911-930f256c67d1",
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"location\": \"sunt anim irure occaecat\",\n  \"name\": \"veniam laboris sit quis\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/accounts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts"
+									]
+								},
+								"description": "Post data to the API at the / endpoint, passing the json to add as body data"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"location\": \"United Kingdom\",\n    \"name\": \"sue\"\n  },\n  \"message\": \"You made a POST request with the following data!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete an account",
+					"id": "e6ff0cdf-e5b1-4872-801a-f9f1833f1d43",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/accounts?id=ut",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "ut"
+								}
+							]
+						},
+						"description": "Delete data from the API at the / endpoint, specifying the data by passing its id as a query parameter"
+					},
+					"response": [
+						{
+							"id": "ecc0d728-6c2e-4b1e-8771-ce9fe18679b7",
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/accounts?id=ut",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "ut"
+										}
+									]
+								},
+								"description": "Delete data from the API at the / endpoint, specifying the data by passing its id as a query parameter"
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update an account",
+					"id": "015573b1-e66a-402e-8c1f-445929463427",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Duis ex pariatur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/accounts?id=ut",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "ut"
+								}
+							]
+						},
+						"description": "Patch data at the / endpoint by passing a query parameter representing the id and body json with the data to update with"
+					},
+					"response": [
+						{
+							"id": "0b0a5fdb-f199-4c0a-bd5f-582ff03bbd94",
+							"name": "Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Duis ex pariatur\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/accounts?id=ut",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "ut"
+										}
+									]
+								},
+								"description": "Patch data at the / endpoint by passing a query parameter representing the id and body json with the data to update with"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"name\": \"sue\"\n  },\n  \"message\": \"You made a PATCH request to update id=1 with the following data!\"\n}"
+						}
+					]
+				}
+			],
+			"id": "6f4d2b2f-54f6-485f-97d2-c251e5987c8b"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bcccc088-5f49-4921-b753-20c63c74eff3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "3a087806-fb9a-4a22-869d-963a045505cb",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Successful request\", function () {",
+					"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202, 204]);",
+					"});",
+					"",
+					"pm.test(\"Security checks\", function () {",
+					"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202, 204]);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "c7f412f0-a584-4650-94bd-5cf2ba7f1297",
+			"key": "baseUrl",
+			"value": "http://localhost:3000"
+		}
+	]
+}
